@@ -95,7 +95,7 @@ public class RecipeStepsRViewAdapter extends RecyclerView.Adapter<RecyclerView.V
             final RecipeStepsModel recipeSteps = listRecipeStepss.get(position-2);
             if(SelectRecipeStep.twoPane && ((SelectRecipeStep) con).selectedRecipeModel!=null) {
                 if (recipeSteps.getId() == ((SelectRecipeStep) con).selectedRecipeModel.getId()) {
-                    ((View_Holder_Step) holder).cardRecipeStep.setCardBackgroundColor(Color.RED);
+                    ((View_Holder_Step) holder).cardRecipeStep.setCardBackgroundColor(Color.DKGRAY);
                 } else {
                     ((View_Holder_Step) holder).cardRecipeStep.setCardBackgroundColor(Color.WHITE);
                 }

@@ -21,11 +21,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.SelectRecipeStep"
-            android:parentActivityName=".activities.SelectRecipe"></activity>
+        <activity android:name=".activities.SelectRecipeStep"></activity>
 
-        <activity android:name=".activities.SelectRecipeStepDetailContainer"
-            android:parentActivityName=".activities.SelectRecipeStep"></activity>
+        <activity android:name=".activities.SelectRecipeStepDetailContainer"></activity>
     </application>
 
 </manifest>
