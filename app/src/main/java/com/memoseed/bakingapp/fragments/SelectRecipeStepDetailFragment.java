@@ -74,6 +74,7 @@ public class SelectRecipeStepDetailFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
+        stopPlayer();
     }
 
     @Override

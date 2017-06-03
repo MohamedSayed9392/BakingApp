@@ -6,10 +6,12 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
 
@@ -43,6 +45,19 @@ public class UTils {
         return connected;
     }
 
+    public static   int convertDpToPixel(int dp,Context cont){
+        Resources resources = cont.getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        int px = (int) (dp * (metrics.densityDpi / 160f));
+        return px;
+    }
+
+    public static  float convertPxToDP(int px,Context cont){
+        Resources resources = cont.getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        float dp = (float) (px / (metrics.densityDpi / 160f));
+        return dp;
+    }
 
     public static void openUrl(Activity activity, String Url) {
         Intent i = new Intent(Intent.ACTION_VIEW);
